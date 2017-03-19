@@ -51,7 +51,7 @@ type LightDark1DActionSpace
 end
 Base.length(asp::LightDark1DActionSpace) = length(asp.actions)
 actions(::LightDark1D) = LightDark1DActionSpace((-1, 0, 1)) # Left Stop Right
-actions(pomdp::LightDark1D, s::LightDark1DState) = acts
+
 iterator(space::LightDark1DActionSpace) = space.actions
 dimensions(::LightDark1DActionSpace) = 1
 n_actions(p::LightDark1D) = length(actions(p))
